@@ -23,15 +23,33 @@ const userName = prompt('Inserisci il tuo nome');
 
 
 // METODO 2 OK - BOOLEAN + FOR + IF
-let find = false 
+// let find = false 
 
-for (let i = 0; i < invitedList.length; i++) {
-    if (userName == invitedList[i]) {
+// for (let i = 0; i < invitedList.length; i++) {
+//     if (userName == invitedList[i]) {
+//         find = true;
+//     }
+// }
+
+// if (find == true) {
+//     alert('Prego può entrare');
+// } else {
+//     alert('Non può entare');
+// }
+
+
+// METODO 3 OK - BOOLEAN + WHILE + IF
+
+let i = 0
+while (i < invitedList && find == false) {
+    if (invitedList[i] == nameUser) {
         find = true;
     }
+
+    i++
 }
 
-if (find == true) {
+if (find) {
     alert('Prego può entrare');
 } else {
     alert('Non può entare');
